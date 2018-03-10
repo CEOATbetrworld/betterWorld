@@ -22,7 +22,7 @@ html {
     position:absolute;
     top:90%;
     left:45%;
-    font-size: 2em;
+    font-size: 1.6em;
   }
   
   @media screen and (max-width: 768px) {
