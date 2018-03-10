@@ -6,7 +6,7 @@ function World(props) {
 }
 
 setInterval(function () {
+    ReactDOM.render(<World being={list[i]} />, document.getElementById("root"));
     if (i < list.length) i++;
     if (i === list.length) i = 0;
-    ReactDOM.render(<World being={list[i]} />, document.getElementById("root"));
 }, 1500);
