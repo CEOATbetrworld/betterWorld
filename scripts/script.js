@@ -2,7 +2,7 @@ var i = 0;
 var list = ["Humans help Humans", "Humans help animals", "Humans can help anyone who accepts", "This is what makes us human"];
 
 function World(props) {
-    return <h1><span id="otherColor">{props.being}</span></h1>;
+    return <h1>{props.being}></h1>;
 }
 
 setInterval(function () {
