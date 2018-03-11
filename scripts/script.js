@@ -17,7 +17,7 @@ class World extends React.Component {
 
   componentDidMount() {
     var self = this;
-    setInterval(function() {
+    setInterval(function () {
       if (i < list.length) i++;
       if (i === list.length) i = 0;
       self.setState({
@@ -28,6 +28,9 @@ class World extends React.Component {
   render() {
     return (
       <div>
+        <div id='stars'></div>
+        <div id='stars2'></div>
+        <div id='stars3'></div>
         <h1>{this.state.being}</h1>
         <a href="contact.html">Contact Us</a>
       </div>
