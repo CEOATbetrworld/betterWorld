@@ -14,9 +14,7 @@ h1,h2 {
   transform: translate(-50%, -50%);
   color: #ffd700;
 }
-:lang(hindi) {
-  font-family: 'Noto Sans', sans-serif;
-}
+
 
 a{
   color: #ffd700;
