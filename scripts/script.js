@@ -74,7 +74,7 @@ class World extends React.Component {
             <h1>{this.state.being}</h1>
         </div>
         <div className="contact row">
-          <a className="col"href="">Contact Us</a>
+          <a className="col"href="contact.html">Contact Us</a>
         </div>
       </div>
     );
