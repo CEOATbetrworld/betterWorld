@@ -16,7 +16,7 @@ class Head extends React.Component {
       <div className="topnav" id="myTopnav">
   <a>BetterWorld</a>
   <a href="contact.html">Contact</a>
-  <a href="#about">About</a>
+  <a href="about.html">About</a>
   <a href="javascript:void(0);" className="icon" onClick={myFunction}>&#9776;</a>
 </div>
     );
