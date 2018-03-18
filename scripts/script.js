@@ -5,8 +5,7 @@ var list = [
   "Humans help animals",
   "Humans can help anyone who accepts",
   "This is what makes us human",
-  "किसी के काम जो आये...",
-  "उसे इन्सान कहते हैं "
+  "absolutely"
 ];
 
 class World extends React.Component {
