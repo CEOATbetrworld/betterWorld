@@ -10,11 +10,6 @@ html{
   font-family: "Playfair Display", serif;
 }
 
-#logoSvg{
-  width: 100px;
-  height: 100px;
-}
-
 .topnav {
   background-color: #A020F0;
   overflow: hidden;
@@ -53,6 +48,10 @@ html{
   .topnav a.icon {
     float: right;
     display: block;
+  }
+  .topnav a {
+    padding: 20px 16px;
+    font-size: 4em;
   }
 }
 
