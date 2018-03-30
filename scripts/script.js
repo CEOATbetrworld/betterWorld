@@ -10,15 +10,25 @@ var list = [
 ];
 
 class Head extends React.Component {
-  
+
   render() {
     return (
-      <div className="topnav" id="myTopnav">
-  <a>BetterWorld</a>
-  <a href="contact.html">Contact</a>
-  <a href="about.html">About</a>
-  <a href="javascript:void(0);" className="icon" onClick={myFunction}>&#9776;</a>
-</div>
+      <nav className="navbar navbar-light bg-light navbar-expand-lg">
+        <a href="index.html" className="navbar-brand">betterWorld</a>
+        <button className="navbar-toggler" data-toggle="collapse" data-target='#navbarCollapse'>
+        <span className="navbar-toggler-icon"></span>
+          </button>
+        <div className="collapse navbar-collapse" id="navbarCollapse">
+          <ul className="navbar-nav ml-auto">
+            <li className="navbar-item">
+              <a className="nav-link" href="about.html">About</a>
+            </li>
+            <li className="navbar-item">
+              <a className="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     );
   }
 }
@@ -58,12 +68,3 @@ class World extends React.Component {
 }
 
 ReactDOM.render(<World />, document.getElementById("root"));
-
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-      x.className += " responsive";
-  } else {
-      x.className = "topnav";
-  }
-}
