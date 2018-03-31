@@ -1,1 +1,84 @@
-"use strict";var _createClass=function(){function e(e,t){for(var a=0;a<t.length;a++){var n=t[a];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,a,n){return a&&e(t.prototype,a),n&&e(t,n),t}}();function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _possibleConstructorReturn(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function _inherits(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}var i=0,list=["Humans help Humans","Humans help animals","Humans can help anyone who accepts","This is what makes us human","किसी के काम जो आये...","उसे इन्सान कहते हैं"],Head=function(e){function t(){return _classCallCheck(this,t),_possibleConstructorReturn(this,(t.__proto__||Object.getPrototypeOf(t)).apply(this,arguments))}return _inherits(t,React.Component),_createClass(t,[{key:"render",value:function(){return React.createElement("nav",{className:"navbar navbar-light bg-light navbar-expand-lg"},React.createElement("a",{href:"index.html",className:"navbar-brand"},"betterWorld"),React.createElement("button",{className:"navbar-toggler","data-toggle":"collapse","data-target":"#navbarCollapse"},React.createElement("span",{className:"navbar-toggler-icon"})),React.createElement("div",{className:"collapse navbar-collapse",id:"navbarCollapse"},React.createElement("ul",{className:"navbar-nav ml-auto"},React.createElement("li",{className:"navbar-item"},React.createElement("a",{className:"nav-link",href:"about.html"},"About")),React.createElement("li",{className:"navbar-item"},React.createElement("a",{className:"nav-link",href:"contact.html"},"Contact Us")))))}}]),t}(),World=function(e){function t(e){_classCallCheck(this,t);var a=_possibleConstructorReturn(this,(t.__proto__||Object.getPrototypeOf(t)).call(this,e));return a.state={being:list[0]},a}return _inherits(t,React.Component),_createClass(t,[{key:"componentDidMount",value:function(){var e=this;setInterval(function(){i<list.length&&i++,i===list.length&&(i=0),e.setState({being:list[i]})},1300)}},{key:"render",value:function(){return React.createElement("div",{className:"container-fluid"},React.createElement(Head,null),React.createElement("div",{className:"row center"},React.createElement("h1",null,this.state.being)),React.createElement("div",{className:"contact row"},React.createElement("a",{className:"col",href:"contact.html"},"Contact Us")))}}]),t}();ReactDOM.render(React.createElement(World,null),document.getElementById("root"));
+var i = 0;
+
+var list = [
+    "Humans help Humans",
+    "Humans help animals",
+    "Humans can help anyone who accepts",
+    "This is what makes us human",
+    "किसी के काम जो आये...",
+    "उसे इन्सान कहते हैं"
+];
+
+class Head extends React.Component {
+
+    render() {
+        return (
+            <nav className="navbar navbar-light bg-light navbar-expand-lg fixed-top">
+                <a href="index.html" className="navbar-brand">betterWorld</a>
+                <button className="navbar-toggler" data-toggle="collapse" data-target='#navbarCollapse'>
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="collapse navbar-collapse" id="navbarCollapse">
+                    <ul className="navbar-nav ml-auto">
+                        <li className="navbar-item">
+                            <a className="nav-link" href="about.html">About</a>
+                        </li>
+                        <li className="navbar-item">
+                            <a className="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        );
+    }
+}
+
+class Jumbo extends React.Component {
+    render() {
+        return (
+            <div className="jumbotron jumbotron-fluid">
+                <div className="container">
+                    <h1 className="display-4">Humans help Humans</h1>
+                    <p className="lead">Only we can make this world better</p>
+                </div>
+            </div>
+        )
+    }
+}
+
+class World extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            being: list[0]
+        };
+    }
+
+    componentDidMount() {
+        var self = this;
+        setInterval(function () {
+            if (i < list.length) i++;
+            if (i === list.length) i = 0;
+            self.setState({
+                being: list[i]
+            });
+        }, 1300);
+    }
+
+    render() {
+        return (
+            <div className="container-fluid">
+                <Head />
+                <Jumbo/>
+                <div className="row center">
+                    <h1>{this.state.being}</h1>
+                </div>
+                <div className="contact row">
+                    <a className="col" href="contact.html">Contact Us</a>
+                </div>
+            </div>
+        );
+    }
+}
+
+ReactDOM.render(<World />, document.getElementById("root"));

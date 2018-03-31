@@ -1,6 +1,6 @@
 .center{
   padding:20% 0% 20% 30%;
-  height: 80vh;
+  height: 70vh;
 }
 
 .contact{
@@ -11,3 +11,10 @@ body {
   font-family: "Playfair Display", serif;
 }
 
+.jumbotron{
+  margin-top: 70px;
+  height:40vh;
+  background-image: url(human.jpg);
+  background-repeat: no-repeat;
+  background-size:100% 100%;
+}
