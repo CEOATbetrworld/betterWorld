@@ -1,13 +1,13 @@
 var i = 0;
 
-var list = [
-    "Humans help Humans",
-    "Humans help animals",
-    "Humans can help anyone who accepts",
-    "This is what makes us human",
-    "किसी के काम जो आये...",
-    "उसे इन्सान कहते हैं"
-];
+// var list = [
+//     "Humans help Humans",
+//     "Humans help animals",
+//     "Humans can help anyone who accepts",
+//     "This is what makes us human",
+//     "किसी के काम जो आये...",
+//     "उसे इन्सान कहते हैं"
+// ];
 
 class Head extends React.Component {
 
@@ -46,33 +46,52 @@ class Jumbo extends React.Component {
     }
 }
 
+class Contributions extends React.Component {
+    render() {
+        return (
+             <div>
+            <h3>Contributions Till Date </h3>
+            <div className="card" style={{"width": "18rem"}}>
+                <img className="card-img-top" src="images/arohi.jpg" alt="News Photo" />
+                <div className="card-body">
+                    <h5 className="card-title">Spread Awareness for Arohi's Help</h5>
+                    <p className="card-text"></p>
+                    <label for="Status">Status : </label>
+                    <a href="#" className="btn btn-success" id="status">Completed Successfully</a>
+                </div>
+            </div>
+            </div>)
+    }
+}
+
 class World extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            being: list[0]
-        };
+        // this.state = {
+        //     being: list[0]
+        // };
     }
 
-    componentDidMount() {
-        var self = this;
-        setInterval(function () {
-            if (i < list.length) i++;
-            if (i === list.length) i = 0;
-            self.setState({
-                being: list[i]
-            });
-        }, 1300);
-    }
+    // componentDidMount() {
+    //     var self = this;
+    //     setInterval(function () {
+    //         if (i < list.length) i++;
+    //         if (i === list.length) i = 0;
+    //         self.setState({
+    //             being: list[i]
+    //         });
+    //     }, 1300);
+    // }
 
     render() {
         return (
             <div className="container-fluid">
                 <Head />
-                <Jumbo/>
-                <div className="row center">
+                <Jumbo />
+                <Contributions />
+                {/* <div className="row center">
                     <h1>{this.state.being}</h1>
-                </div>
+                </div> */}
                 <div className="contact row">
                     <a className="col" href="contact.html">Contact Us</a>
                 </div>
