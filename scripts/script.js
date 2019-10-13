@@ -1,4 +1,3 @@
-var i = 0;
 
 // var list = [
 //     "Humans help Humans",
@@ -13,7 +12,7 @@ class Head extends React.Component {
 
     render() {
         return (
-            <nav className="navbar navbar-light bg-light navbar-expand-lg fixed-top">
+            <nav className="navbar navbar-dark bg-dark navbar-expand-lg fixed-top">
                 <a href="index.html" className="navbar-brand">betterWorld</a>
                 <button className="navbar-toggler" data-toggle="collapse" data-target='#navbarCollapse'>
                     <span className="navbar-toggler-icon"></span>
@@ -28,7 +27,10 @@ class Head extends React.Component {
                         </li>
                     </ul>
                 </div>
+
             </nav>
+
+            
         );
     }
 }
@@ -49,8 +51,10 @@ class Jumbo extends React.Component {
 class Contributions extends React.Component {
     render() {
         return (
-             <div>
-            <h3>Contributions Till Date </h3>
+            
+    <div>
+      <h3>Contributions Till Date </h3>
+         <div className="card-deck">
             <div className="card" style={{"width": "18rem"}}>
                 <img className="card-img-top" src="images/arohi.jpg" alt="News Photo" />
                 <div className="card-body">
@@ -60,7 +64,26 @@ class Contributions extends React.Component {
                     <a href="#" className="btn btn-success" id="status">Completed Successfully</a>
                 </div>
             </div>
-            </div>)
+             <div className="card">
+                <img className="card-img-top" src="http://via.placeholder.com/350x150" alt="Card image cap"/>
+                <div className="card-body">
+                <h5 className="card-title">Card title</h5>
+                <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id justo euismod, gravida neque quis, fringilla ligula. Nullam ultrices commodo ipsum, a tempus mi lobortis id. Nulla ac felis urna. Nulla placerat vulputate justo interdum dignissim. Duis bibendum eget sapien dictum efficitur. Suspendisse scelerisque aliquam ultrices. Vivamus molestie magna at dictum rhoncus. Sed fermentum eleifend iaculis.
+
+</p>
+                </div>
+             </div>
+             <div className="card">
+                <img className="card-img-top" src="http://via.placeholder.com/350x150" alt="Card image cap"/>
+                <div className="card-body">
+                <h5 className="card-title">Card title</h5>
+                <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id justo euismod, gravida neque quis, fringilla ligula. Nullam ultrices commodo ipsum, a tempus mi lobortis id. Nulla ac felis urna. Nulla placerat vulputate justo interdum dignissim. Duis bibendum eget sapien dictum efficitur. Suspendisse scelerisque aliquam ultrices. Vivamus molestie magna at dictum rhoncus. Sed fermentum eleifend iaculis.
+
+</p>
+              </div>
+            </div>
+         </div>
+    </div>)
     }
 }
 

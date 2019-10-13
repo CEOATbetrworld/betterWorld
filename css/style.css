@@ -1,24 +1,4 @@
-.center{
-  padding:20% 0% 20% 30%;
-  height: 70vh;
-}
-
-.contact{
-  text-align:center;
-}
-
-body { 
-  font-family: "Playfair Display", serif;
-}
-
-.jumbotron{
-  margin-top: 70px;
-  height:55vh;
-  background-image: url(human.jpg);
-  background-repeat: no-repeat;
-  background-size:100% 100%;
-}
-
-.card{
-  margin-top:20px;
+h1 {
+    font-size: 500px;
+    color: blueviolet;
 }
