@@ -40,6 +40,7 @@ class Jumbo extends React.Component {
                 <div className="container">
                     <h1 className="display-4">Humans help Humans</h1>
                     <p className="lead">Only we can make this world better</p>
+                    <p className="lead">'Never doubt that a small group of thoughtful,concerned citizens can change the world. Indeed, it's the only thing that ever has' - Margaret Mead</p>
                 </div>
             </div>
         )
